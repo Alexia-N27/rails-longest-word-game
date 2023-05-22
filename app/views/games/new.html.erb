@@ -1,0 +1,15 @@
+<h1 class="p-3">New game</h1>
+
+<div class="p-3">
+<%= @letters %>
+</div>
+
+<p class="p-3">What is the longest word you can find ?</p>
+
+<form action="score" method="post" data-turbo="false">
+  <div class="input-group mb-3 p-3">
+    <input type="text" name="word" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" id="button-addon2">Play</button>
+  </div>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
